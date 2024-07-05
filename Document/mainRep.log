@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.27)  5 JUL 2024 17:11
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.27)  5 JUL 2024 18:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2121,12 +2121,42 @@ File: Pic/High_level_architecture.png Graphic file (type bmp)
 
 Package fontspec Info: IRNazanin scale = 1.25.
 
+LaTeX Font Info:    Font shape `TU/IRNazanin(0)/m/n' will be
+(Font)              scaled to size 17.99998pt on input line 135.
+LaTeX Font Info:    Font shape `TU/IRNazanin(0)/b/n' will be
+(Font)              scaled to size 17.99998pt on input line 135.
+LaTeX Font Info:    Font shape `TU/LinuxLibertine(0)/b/n' will be
+(Font)              scaled to size 15.84007pt on input line 135.
+LaTeX Font Info:    Font shape `TU/LinuxLibertine(0)/b/n' will be
+(Font)              scaled to size 13.20007pt on input line 154.
+[3
+
+]
+Overfull \hbox (3.62407pt too wide) in paragraph at lines 259--274
+[]\TU/IRNazanin(0)/m/n/10 برای خواندن پیامک‌ها (آدرس، متن و نوع پیامک) را مشخص 
+می‌کند و سپس یک کوئری برای دریافت این داده‌ها از []\TU/LinuxLibertine(0)/m/n/10
+ contentResolver[][]
+ []
+
+[4]
+Overfull \hbox (2.11264pt too wide) in paragraph at lines 275--290
+[]\TU/IRNazanin(0)/m/n/10 در کلاس []\TU/LinuxLibertine(0)/m/n/10 SMSActivation[
+] \TU/IRNazanin(0)/m/n/10 متغیرهای []\TU/LinuxLibertine(0)/m/n/10 permission[] 
+\TU/IRNazanin(0)/m/n/10 و []\TU/LinuxLibertine(0)/m/n/10 requestCode[] \TU/IRNa
+zanin(0)/m/n/10 برای مدیریت مجوزهای دسترسی به پیامک‌ها استفاده می‌شوند.[]
+ []
+
+[5]
+فصل 3.
+
+Package fontspec Info: IRNazanin scale = 1.25.
+
 
 Package glossaries Warning: No \printglossary or \printglossaries found. 
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[3
+[6
 
 ] (./mainRep.aux)
  ***********
@@ -2140,16 +2170,16 @@ Package rerunfilecheck Warning: File `mainRep.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `mainRep.out':
-(rerunfilecheck)             Before: 493950310F6F574ECBF43579D9670B80;328
-(rerunfilecheck)             After:  3F2739663B3FAFD3D48F6B099A1CE89B;326.
+(rerunfilecheck)             Before: ECAA85E7A085AA8889F81F282E127253;1788
+(rerunfilecheck)             After:  E66F259AE0BED641C36BEDED019BFF47;2437.
  ) 
 Here is how much of TeX's memory you used:
- 39423 strings out of 474794
- 774855 string characters out of 5762089
+ 39448 strings out of 474794
+ 775577 string characters out of 5762089
  1935842 words of memory out of 5000000
- 60622 multiletter control sequences out of 15000+600000
- 565558 words of font info for 132 fonts, out of 8000000 for 9000
+ 60643 multiletter control sequences out of 15000+600000
+ 565590 words of font info for 136 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  96i,9n,120p,2431b,1361s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on mainRep.pdf (4 pages).
+Output written on mainRep.pdf (7 pages).
