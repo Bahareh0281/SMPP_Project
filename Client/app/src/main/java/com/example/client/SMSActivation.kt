@@ -113,10 +113,8 @@ class SMSActivation : AppCompatActivity() {
                 chatItems.add(ChatAdapter.ChatItem(number, text))
             }
         }
-
         // Close the cursor
         cursor.close()
-
         return chatItems
     }
 }

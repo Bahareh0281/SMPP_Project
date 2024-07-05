@@ -16,9 +16,6 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        jcenter()
     }
 }
-
-rootProject.name = "Client"
-include(":app")
- 

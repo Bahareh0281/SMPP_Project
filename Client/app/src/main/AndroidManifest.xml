@@ -24,10 +24,10 @@
         android:theme="@style/Theme.TestSMPP">
 
         <activity
-            android:name=".SMSActivity"
+            android:name=".SMSActivation"
             android:exported="false" />
         <activity
-            android:name=".SettingsActivity"
+            android:name=".SettingsActivation"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
