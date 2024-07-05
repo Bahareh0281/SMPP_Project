@@ -37,10 +37,31 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
         this.key = key
     }
 
+    private fun getSessionConfig(type: SmppBindType): SmppSessionConfiguration? {
+        val sessionConfig = SmppSessionConfiguration()
+        sessionConfig.type = type
+
+        val sharedPref = context.getSharedPreferences("gateway_config", Context.MODE_PRIVATE)
+
+        sessionConfig.host = sharedPref.getString("host", "")
+        sessionConfig.port = sharedPref.getInt("port", 0)
+        sessionConfig.systemId = sharedPref.getString("username", "")
+        sessionConfig.password = sharedPref.getString("password", "")
+
+        return sessionConfig
+    }
 
 
+    @Throws(SmppInvalidArgumentException::class)
+    fun createSubmitSm(src: String?, dst: String?, text: String?, charset: String?): SubmitSm? {
+        val sm = SubmitSm()
 
-
+        sm.sourceAddress = Address(5.toByte(), 0.toByte(), src)
+        sm.destAddress = Address(1.toByte(), 1.toByte(), dst)
+        sm.dataCoding = 8.toByte()
+        sm.shortMessage = CharsetUtil.encode(text, charset)
+        return sm
+    }
 
     private fun splitMessage(message: String, charset: String): List<String> {
         val maxByteLength = 240
