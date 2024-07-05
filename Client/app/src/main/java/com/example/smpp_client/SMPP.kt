@@ -42,7 +42,24 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
 
 
 
-    
+    private fun splitMessage(message: String, charset: String): List<String> {
+        val maxByteLength = 240
+        val parts = mutableListOf<String>()
+        val charsetEncoder = Charset.forName(charset).newEncoder()
+        val byteBuffer = charsetEncoder.encode(java.nio.CharBuffer.wrap(message))
+
+        var start = 0
+        //while (start < byteBuffer.limit()) {
+        val end = (start + maxByteLength).coerceAtMost(byteBuffer.limit())
+        val partBytes = ByteArray(end - start)
+        byteBuffer.get(partBytes, 0, partBytes.size)
+        parts.add(String(partBytes, Charset.forName(charset)))
+        start = end
+        //  break;
+        //}
+
+        return parts
+    }
 
     fun extractServingCellSignalStrength(message: String): Int? {
         val parts = message.split(";")
