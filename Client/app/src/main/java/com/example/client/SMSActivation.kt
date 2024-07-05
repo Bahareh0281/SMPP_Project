@@ -114,7 +114,7 @@ class SMSActivation : AppCompatActivity() {
             }
         }
         // Close the cursor
-        cursor.close()
+        cursor.close()h
         return chatItems
     }
 }
