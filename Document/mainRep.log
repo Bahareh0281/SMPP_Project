@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.27)  6 JUL 2024 02:24
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.27)  6 JUL 2024 02:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2183,40 +2183,43 @@ File: Pic/Message.png Graphic file (type bmp)
 <Pic/Message.png>
 File: Pic/log1.png Graphic file (type bmp)
 <Pic/log1.png>
- [8] [9] [10] [11] [12] [13]
+ [8]
+File: Pic/Loc.png Graphic file (type bmp)
+<Pic/Loc.png>
+ [9] [10] [11] [12] [13] [14]
 فصل 4.
 
 Package fontspec Info: IRNazanin scale = 1.25.
 
 LaTeX Font Info:    Font shape `TU/LinuxLibertine(0)/b/n' will be
-(Font)              scaled to size 15.84007pt on input line 442.
+(Font)              scaled to size 15.84007pt on input line 485.
 
-Overfull \hbox (2.61612pt too wide) in paragraph at lines 454--465
+Overfull \hbox (2.61612pt too wide) in paragraph at lines 497--508
 []\TU/IRNazanin(0)/m/n/10 در متد []\TU/LinuxLibertine(0)/m/n/10 onCreate[] \TU/
 IRNazanin(0)/m/n/10 ، ابتدا نوار ابزار پنهان می‌شود و نمونه‌ای از []\TU/LinuxLi
 bertine(0)/m/n/10 LocationAndCellInfo[] \TU/IRNazanin(0)/m/n/10 برای دریافت اطل
 اعات مکان و سلول اولیه‌سازی[]
  []
 
-[14
+[15
 
-] (./Codes/threshold.kt [15]) (./Codes/delay.kt) [16]
-Overfull \hbox (3.62407pt too wide) in paragraph at lines 684--699
+] (./Codes/threshold.kt [16]) (./Codes/delay.kt) [17]
+Overfull \hbox (3.62407pt too wide) in paragraph at lines 727--742
 []\TU/IRNazanin(0)/m/n/10 برای خواندن پیامک‌ها (آدرس، متن و نوع پیامک) را مشخص 
 می‌کند و سپس یک کوئری برای دریافت این داده‌ها از []\TU/LinuxLibertine(0)/m/n/10
  contentResolver[][]
  []
 
 
-Overfull \hbox (2.11264pt too wide) in paragraph at lines 700--715
+Overfull \hbox (2.11264pt too wide) in paragraph at lines 743--758
 []\TU/IRNazanin(0)/m/n/10 در کلاس []\TU/LinuxLibertine(0)/m/n/10 SMSActivation[
 ] \TU/IRNazanin(0)/m/n/10 متغیرهای []\TU/LinuxLibertine(0)/m/n/10 permission[] 
 \TU/IRNazanin(0)/m/n/10 و []\TU/LinuxLibertine(0)/m/n/10 requestCode[] \TU/IRNa
 zanin(0)/m/n/10 برای مدیریت مجوزهای دسترسی به پیامک‌ها استفاده می‌شوند.[]
  []
 
-[17] [18]
-Overfull \hbox (37.75044pt too wide) in paragraph at lines 885--894
+[18] [19]
+Overfull \hbox (37.75044pt too wide) in paragraph at lines 928--937
 [][]\TU/IRNazanin(0)/m/n/10 متد []\TU/LinuxLibertine(0)/m/n/10 initialize()[] \
 TU/IRNazanin(0)/m/n/10 که []\TU/LinuxLibertine(0)/m/n/10 locationManager[] \TU/
 IRNazanin(0)/m/n/10 و []\TU/LinuxLibertine(0)/m/n/10 telephonyManager[] \TU/IRN
@@ -2224,7 +2227,7 @@ azanin(0)/m/n/10 را مقداردهی اولیه می‌کند با استفا�
 /m/n/10 context.getSystemService()[][]
  []
 
-[19] [20]
+[20] [21]
 فصل 5.
 
 Package fontspec Info: IRNazanin scale = 1.25.
@@ -2234,7 +2237,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[21
+[22
 
 ] (./mainRep.aux)
  ***********
@@ -2245,12 +2248,12 @@ Package rerunfilecheck Info: File `mainRep.out' has not changed.
 (rerunfilecheck)             Checksum: D2D0DA8CD97C1B42FE4B5CDB979BB156;6902.
  ) 
 Here is how much of TeX's memory you used:
- 40000 strings out of 474794
- 784533 string characters out of 5762089
+ 40021 strings out of 474794
+ 784876 string characters out of 5762089
  2144842 words of memory out of 5000000
- 61160 multiletter control sequences out of 15000+600000
+ 61180 multiletter control sequences out of 15000+600000
  565798 words of font info for 142 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  96i,9n,120p,2431b,2044s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on mainRep.pdf (22 pages).
+Output written on mainRep.pdf (23 pages).
