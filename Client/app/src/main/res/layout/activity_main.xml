@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Navbar -->
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2196F3"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:orientation="horizontal">
+
+            <!-- Sms button -->
+            <ImageButton
+                android:id="@+id/sms_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:background="?attr/selectableItemBackground"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:src="@drawable/baseline_sms_24" />
+
+            <!-- Settings button -->
+            <ImageButton
+                android:id="@+id/settings_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackground"
+                android:paddingStart="16dp"
+                android:paddingEnd="16dp"
+                android:src="@drawable/baseline_settings_24" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Number input -->
+    <EditText
+        android:id="@+id/number_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/navbar"
+        android:layout_margin="16dp"
+        android:hint="Enter a number"
+        android:inputType="number" />
+
+    <!-- Exit button -->
+    <Button
+        android:id="@+id/exit_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="150dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:textSize="16sp"
+        android:backgroundTint="#550303"
+        android:text="Exit" />
+
+    <!-- Status TextViews -->
+    <TextView
+        android:id="@+id/status_sm_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/exit_button"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:text="The message has been successfully sent."
+        android:textColor="@color/teal_700"
+        android:textSize="18dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/status_sa_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/status_sm_textview"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Acknowledgment has been received."
+        android:textColor="@color/teal_700"
+        android:textSize="18dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/status_fa_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/status_sa_textview"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:text="Acknowledgment hasn't been received yet."
+        android:textColor="#910101"
+        android:textSize="18dp"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/status_fm_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/status_fa_textview"
+        android:layout_margin="40dp"
+        android:text="The message wasn't sent. \nPlease try again."
+        android:textColor="#910101"
+        android:textSize="18dp"
+        android:visibility="gone" />
+
+    <!-- Cryptography Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/status_fm_textview"
+        android:gravity="center_horizontal"
+        android:visibility="gone"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/crypt_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingLeft="30dp"
+            android:text="result" />
+
+        <Button
+            android:id="@+id/crypt_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Crypt" />
+
+        <TextView
+            android:id="@+id/decrypt_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingLeft="30dp"
+            android:text="result" />
+
+        <Button
+            android:id="@+id/decrypt_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="deCrypt" />
+
+        <TextView
+            android:id="@+id/hash_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:paddingLeft="30dp"
+            android:text="result" />
+
+        <Button
+            android:id="@+id/hash_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Hash" />
+
+    </LinearLayout>
+
+</RelativeLayout>
