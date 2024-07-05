@@ -1,0 +1,8 @@
+// Initialize EditText fields with stored or default valuesval hostEditText = findViewById<EditText>(R.id.editTextHost)
+hostEditText.setText(sharedPref.getString("host", "172.20.10.13"))
+val portEditText = findViewById<EditText>(R.id.editTextPort)portEditText.setText(sharedPref.getInt("port", 9500).toString())
+val usernameEditText = findViewById<EditText>(R.id.editTextUsername)
+usernameEditText.setText(sharedPref.getString("username", "smppuser"))
+val passwordEditText = findViewById<EditText>(R.id.editTextPassword)passwordEditText.setText(sharedPref.getString("password", "Ouo5nQM8"))
+val keyEditText = findViewById<EditText>(R.id.editKey)
+keyEditText.setText(sharedPref.getString("key", ""))

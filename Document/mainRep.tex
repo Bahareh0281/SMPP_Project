@@ -212,7 +212,200 @@
 این فصل شامل توضیحات کامل مراحل انجام شده و جزئیات فنی پیاده‌سازی می‌باشد.
 
 \chapter{راهنمای استفاده و پیکربندی سامانه}
+\section{روش اجرای پروژه}
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Pic/ozeki}
+	\caption{برنامه 
+	\lr{ozeki}
+	}
+	\label{fig:ozeki}
+\end{figure}
 
+
+\section{روش استفاده شده برای جلوگیری از استفاده غیرمجاز}
+کد زیر در کلاس 
+\lr{SettingActivation}
+قرار دارد:
+\begin{latin}
+	\lstinputlisting[language=Kotlin]{Codes/Defaults.kt}
+	\label{code:Defaults}
+\end{latin}
+در این کد، تمامی مقادیر ورودی مربوط به اتصال به سرور، به جز
+ \lr{key}
+ ، به صورت پیش‌فرض (شکل \ref{fig:Defaults}) تنظیم شده‌اند تا امکان اتصال به اطلاعات سروری که
+  \lr{Ozeki}
+   در اختیار ما قرار داده است، فراهم شود. این مقادیر شامل
+    \lr{host}
+    ،
+     \lr{port}
+     ،
+      \lr{username}
+       و
+        \lr{password} 
+        می‌شوند که از تنظیمات پیش‌فرض یا مقادیر ذخیره‌شده در 
+        \lr{shared preferences} 
+        خوانده می‌شوند. برای جلوگیری از دسترسی‌ها و اتصال‌های غیرمجاز، یک متغیر به نام 
+        \lr{key}
+         تعریف کرده‌ایم. اگر مشتری در سمت اپلیکیشن کلاینت، این مقدار را به درستی وارد کند، امکان ورود به جلسه (
+        \lr{session}
+        ) و ارسال پیام به سرور را خواهد داشت.
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Pic/Defaults}
+	\caption{قرار گرفتن مقادیر پیشفرض}
+	\label{fig:Defaults}
+\end{figure}
+در کد زیر به طور مشخص تر این بخش توضیح داده می شود.
+\begin{latin}
+	\lstinputlisting[language=Kotlin]{Codes/Access.kt}
+	\label{code:Access}
+\end{latin}
+در کد بالا در بخش
+\begin{latin}
+	\lstinputlisting[language=Kotlin]{Codes/AccessIf.kt}
+	\label{code:AccessIf}
+\end{latin}
+اگر کاربر کدی را وارد کند که با کد ثابت 
+\lr{fixedKey} 
+مطابقت نداشته باشد، دسترسی به تنظیمات و ادامه فرآیند مسیر‌یابی به
+ \lr{MainActivity} 
+ متوقف خواهد شد. به جای آن، یک پیام
+  \lr{Toast}
+   نمایش داده می‌شود (شکل \ref{fig:WrongCode}) که به کاربر اعلام می‌کند که کد وارد شده اشتباه است.
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Pic/WrongCode}
+	\caption{وارد کردن 
+	\lr{key}
+	نادرست
+	}
+	\label{fig:WrongCode}
+\end{figure}
+در صورت مطابقت درست کد ورودی با کد ثابت (شکل \ref{fig:CorrectCode})
+ \lr{fixedKey}
+ ، تنظیمات ورودی (مانند
+  \lr{host}
+  ،
+   \lr{port}
+   ،
+    \lr{username}
+     و
+      \lr{password}
+      ) در
+       \lr{shared preferences} 
+       ذخیره می‌شوند و سپس کاربر به
+        \lr{MainActivity}
+         منتقل می‌شود.
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Pic/CorrectCode}
+	\caption{کد صحیح (مطابق با کد ذخیره شده در پروژه)}
+	\label{fig:CorrectCode}
+\end{figure}
+
+
+\section{اطلاعات دریافتی از سلول}
+\begin{latin}
+	\lstinputlisting[language=Kotlin]{Codes/enums.kt}
+	\label{code:enums}
+\end{latin}
+الگوی
+ \lr{enumeration} 
+ که در این بخش از کد فایل 
+\lr{LocationAndCellInfo.kt}
+استفاده شده، یک رویکرد کارآمد برای شناسایی و مدیریت انواع مختلف سلول‌های شبکه مخابراتی است. در این الگو، انواع مختلف سلول‌ها مانند
+ \lr{GSM}
+ ،
+  \lr{CDMA}
+  ،
+   \lr{LTE}
+    و
+     \lr{WCDMA}
+      با استفاده از اعداد صحیح کوتاه نمایش داده می‌شوند. این عدد بیانگر نوع سلول است و همراه با اطلاعات دیگری نظیر شناسه سلول و قدرت سیگنال به سرور ارسال می‌شود.
+
+\subsection{نحوه عملکرد الگوی
+ \lr{enumeration}
+ :}
+ 
+\textbf{\lr{CellInfoGsm}:}
+در صورتی که
+ \lr{cellInfo}
+  یک نمونه از
+   \lr{CellInfoGsm}
+   باشد، از اطلاعات
+    \lr{cellIdentity} 
+    و
+     \lr{cellSignalStrength} 
+     آن استفاده می‌شود.
+مقدار 0 به عنوان نوع سلول
+ \lr{GSM} 
+ مشخص می‌شود و اطلاعات به صورت "0:شناسه\_سلول,قدرت\_سیگنال;" به سرور ارسال می‌شود.
+
+\textbf{\lr{CellInfoCdma}:}
+اگر 
+\lr{cellInfo}
+ یک نمونه از 
+ \lr{CellInfoCdma}
+  باشد، از اطلاعات
+   \lr{cellIdentity}
+    و
+     \lr{cellSignalStrength}
+      آن استفاده می‌شود.
+مقدار 1 به عنوان نوع سلول
+ \lr{CDMA}
+ مشخص می‌شود و اطلاعات به صورت "1:شناسه\_سلول,قدرت\_سیگنال;" به سرور ارسال می‌شود.
+\textbf{\lr{CellInfoLte}:}
+در صورتی که 
+\lr{cellInfo}
+ یک نمونه از 
+ \lr{CellInfoLte} 
+ باشد، از اطلاعات
+  \lr{cellIdentity}
+   و 
+   \lr{cellSignalStrength}
+    آن استفاده می‌شود.
+مقدار 2 به عنوان نوع سلول 
+\lr{LTE} 
+مشخص می‌شود و اطلاعات به صورت "2:شناسه\_سلول,قدرت\_سیگنال;" به سرور ارسال می‌شود.
+\textbf{\lr{CellInfoWcdma}:}
+اگر 
+\lr{cellInfo}
+ یک نمونه از 
+ \lr{CellInfoWcdma}
+  باشد، از اطلاعات
+   \lr{cellIdentity}
+    و
+     \lr{cellSignalStrength} 
+     آن استفاده می‌شود.
+مقدار 3 به عنوان نوع سلول 
+\lr{WCDMA}
+ مشخص می‌شود و اطلاعات به صورت "3:شناسه\_سلول,قدرت\_سیگنال;" به سرور ارسال می‌شود.
+\textbf{\lr{Unknown Cell Type}:}
+
+اگر نوع
+ \lr{cellInfo}
+ تشخیص داده نشود، یک پیام "
+ \lr{Unknown Cell Type}
+ " به
+  \lr{cellInfoStr}
+   اضافه می‌شود و به سرور ارسال می‌شود.
+   
+\textbf{مزایای استفاده از الگوی
+ \lr{enumeration}
+ :}
+ \begin{itemize}
+ 	\item \textbf{کد کوتاه‌تر و خواناتر: }با استفاده از این الگو، کد شما کوتاه‌تر می‌شود و قابلیت خواندن و درک آن برای برنامه‌نویسان دیگر نیز آسان‌تر است.
+ 	\item 
+ 	\textbf{کاهش حجم داده: }ارسال اعداد کوتاه برای نوع سلول‌ها به جای استفاده از رشته‌های طولانی، باعث کاهش حجم داده ارسالی می‌شود که به بهینگی در استفاده از پهنای باند و منابع شبکه کمک می‌کند.
+ 	\item 
+ 	\textbf{سهولت در تشخیص: }با استفاده از اعداد، سریع‌تر می‌توان نوع سلول را تشخیص داد و فرآیندهای بعدی را مدیریت کرد.
+ \end{itemize}
+این الگوی
+ enumeration
+ به شما کمک می‌کند تا به طور کارآمد‌تر و سازمان‌یافته‌تر انواع مختلف سلول‌های شبکه را در برنامه خود شناسایی و مدیریت کنید.
+
+از این روش برای ایجاد یک لایه اضافی امنیتی استفاده می‌شود، به طوری که تنها کاربرانی که دارای کد دسترسی صحیح هستند، به اطلاعات حساس دسترسی داشته باشند.
 \chapter{توضیحات کدها}
 \section{فایل
 \lr{MainActivity.kt}
