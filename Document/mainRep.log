@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.27)  3 JUL 2024 11:43
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.27)  5 JUL 2024 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2133,8 +2133,15 @@ This document will not have a glossary.
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-Package rerunfilecheck Info: File `mainRep.out' has not changed.
-(rerunfilecheck)             Checksum: 3F2739663B3FAFD3D48F6B099A1CE89B;326.
+
+
+Package rerunfilecheck Warning: File `mainRep.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `mainRep.out':
+(rerunfilecheck)             Before: 493950310F6F574ECBF43579D9670B80;328
+(rerunfilecheck)             After:  3F2739663B3FAFD3D48F6B099A1CE89B;326.
  ) 
 Here is how much of TeX's memory you used:
  39423 strings out of 474794
