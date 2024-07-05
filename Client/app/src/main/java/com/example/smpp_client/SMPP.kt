@@ -29,6 +29,8 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
     private var user: String? = null
     private var password: String? = null
     private var key: String? = null
+
+    // Method to configure SMPP connection details
     fun configure(host: String?, port: String?, user: String?, password: String?, key: String?) {
         this.host = host
         this.port = port
@@ -36,8 +38,11 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
         this.password = password
         this.key = key
     }
+
+    // Method to send an SMS
     fun sendSMS(number: String, text: String): Boolean {
         try {
+            // Initialize SMPP client
             val client = DefaultSmppClient()
             val session = client.bind(getSessionConfig(SmppBindType.TRANSCEIVER))
             val sharedPref = context.getSharedPreferences(
@@ -45,12 +50,13 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
                 AppCompatActivity.MODE_PRIVATE
             )
 
+            // Split the message into parts if necessary
             val parts = splitMessage(text, "UTF-16BE")
+            // Extract serving cell signal strength
             val servingpower = extractServingCellSignalStrength(parts[0])
-            if (servingpower != null)
-            {
-                if (servingpower < -50)
-                {
+            if (servingpower != null) {
+                // Send message parts if signal strength is less than -50
+                if (servingpower < -50) {
                     for (part in parts) {
                         val sm = createSubmitSm("989126211842", "98$number", part, "UCS-2")
                         println("Try to send message part")
@@ -58,25 +64,25 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
                         Log.v("smpp", "hello")
                         println("Message part sent")
                     }
-                }
-                else
+                } else {
                     println("No need to change serving cell")
+                }
             }
 
-
-
+            // Wait for 10 seconds before closing the session
             println("Wait 10 seconds")
             TimeUnit.SECONDS.sleep(10)
 
+            // Close and destroy the session
             println("Destroy session")
             session.close()
             session.destroy()
 
+            // Destroy the client
             println("Destroy client")
             client.destroy()
 
             println("Bye!")
-
             return true
 
         } catch (ex: SmppTimeoutException) {
@@ -93,10 +99,13 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
         Log.v("session", "WTDFFF")
         return false
     }
+
+    // Method to get SMPP session configuration
     private fun getSessionConfig(type: SmppBindType): SmppSessionConfiguration? {
         val sessionConfig = SmppSessionConfiguration()
         sessionConfig.type = type
 
+        // Retrieve configuration from shared preferences
         val sharedPref = context.getSharedPreferences("gateway_config", Context.MODE_PRIVATE)
 
         sessionConfig.host = sharedPref.getString("host", "")
@@ -107,7 +116,7 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
         return sessionConfig
     }
 
-
+    // Method to create a SubmitSm PDU
     @Throws(SmppInvalidArgumentException::class)
     fun createSubmitSm(src: String?, dst: String?, text: String?, charset: String?): SubmitSm? {
         val sm = SubmitSm()
@@ -119,6 +128,7 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
         return sm
     }
 
+    // Method to split a message into parts based on charset
     private fun splitMessage(message: String, charset: String): List<String> {
         val maxByteLength = 240
         val parts = mutableListOf<String>()
@@ -126,18 +136,17 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
         val byteBuffer = charsetEncoder.encode(java.nio.CharBuffer.wrap(message))
 
         var start = 0
-        //while (start < byteBuffer.limit()) {
+        // Split message into parts of maxByteLength bytes
         val end = (start + maxByteLength).coerceAtMost(byteBuffer.limit())
         val partBytes = ByteArray(end - start)
         byteBuffer.get(partBytes, 0, partBytes.size)
         parts.add(String(partBytes, Charset.forName(charset)))
         start = end
-        //  break;
-        //}
 
         return parts
     }
 
+    // Method to extract serving cell signal strength from a message
     fun extractServingCellSignalStrength(message: String): Int? {
         val parts = message.split(";")
 
@@ -150,6 +159,8 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
         }
         return null
     }
+
+    // Method to handle received PDU requests
     override fun firePduRequestReceived(pduRequest: PduRequest<*>): PduResponse? {
         val response = pduRequest.createResponse()
         val sms = pduRequest as DeliverSm
@@ -160,5 +171,4 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
         }
         return response
     }
-
 }
