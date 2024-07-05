@@ -36,7 +36,63 @@ class Smpp(private val context: Context) : DefaultSmppSessionHandler() {
         this.password = password
         this.key = key
     }
+    fun sendSMS(number: String, text: String): Boolean {
+        try {
+            val client = DefaultSmppClient()
+            val session = client.bind(getSessionConfig(SmppBindType.TRANSCEIVER))
+            val sharedPref = context.getSharedPreferences(
+                "gateway_config",
+                AppCompatActivity.MODE_PRIVATE
+            )
 
+            val parts = splitMessage(text, "UTF-16BE")
+            val servingpower = extractServingCellSignalStrength(parts[0])
+            if (servingpower != null)
+            {
+                if (servingpower < -50)
+                {
+                    for (part in parts) {
+                        val sm = createSubmitSm("989126211842", "98$number", part, "UCS-2")
+                        println("Try to send message part")
+                        session.submit(sm, TimeUnit.SECONDS.toMillis(50))
+                        Log.v("smpp", "hello")
+                        println("Message part sent")
+                    }
+                }
+                else
+                    println("No need to change serving cell")
+            }
+
+
+
+            println("Wait 10 seconds")
+            TimeUnit.SECONDS.sleep(10)
+
+            println("Destroy session")
+            session.close()
+            session.destroy()
+
+            println("Destroy client")
+            client.destroy()
+
+            println("Bye!")
+
+            return true
+
+        } catch (ex: SmppTimeoutException) {
+            Log.v("session", "SmppTimeoutException")
+        } catch (ex: SmppChannelException) {
+            Log.v("session", "SmppChannelException")
+        } catch (ex: SmppBindException) {
+            Log.v("session", "SmppBindException")
+        } catch (ex: UnrecoverablePduException) {
+            Log.v("session", "UnrecoverablePduException")
+        } catch (ex: InterruptedException) {
+            Log.v("session", "InterruptedException")
+        }
+        Log.v("session", "WTDFFF")
+        return false
+    }
     private fun getSessionConfig(type: SmppBindType): SmppSessionConfiguration? {
         val sessionConfig = SmppSessionConfiguration()
         sessionConfig.type = type
