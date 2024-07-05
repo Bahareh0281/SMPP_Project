@@ -1,4 +1,4 @@
-package com.example.smpp_client.ui.theme
+package com.example.client.ui.theme
 
 import androidx.compose.ui.graphics.Color
 

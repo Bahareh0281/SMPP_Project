@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.smpp_client"
+    namespace = "com.example.client"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.smpp_client"
+        applicationId = "com.example.client"
         minSdk = 27
         targetSdk = 34
         versionCode = 1

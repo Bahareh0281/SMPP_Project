@@ -19,5 +19,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "SMPP_Client"
+rootProject.name = "Client"
 include(":app")
+ 

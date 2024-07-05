@@ -1,4 +1,4 @@
-package com.example.smpp_client
+package com.example.client
 
 import org.junit.Test
 
