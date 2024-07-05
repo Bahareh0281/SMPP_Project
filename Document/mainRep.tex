@@ -306,6 +306,12 @@
 
 
 \section{اطلاعات دریافتی از سلول}
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Pic/Message}
+	\caption{پیام دریافت شده}
+	\label{fig:Message}
+\end{figure}
 \begin{latin}
 	\lstinputlisting[language=Kotlin]{Codes/enums.kt}
 	\label{code:enums}
@@ -355,6 +361,7 @@
 مقدار 1 به عنوان نوع سلول
  \lr{CDMA}
  مشخص می‌شود و اطلاعات به صورت "1:شناسه\_سلول,قدرت\_سیگنال;" به سرور ارسال می‌شود.
+ 
 \textbf{\lr{CellInfoLte}:}
 در صورتی که 
 \lr{cellInfo}
@@ -368,6 +375,8 @@
 مقدار 2 به عنوان نوع سلول 
 \lr{LTE} 
 مشخص می‌شود و اطلاعات به صورت "2:شناسه\_سلول,قدرت\_سیگنال;" به سرور ارسال می‌شود.
+
+
 \textbf{\lr{CellInfoWcdma}:}
 اگر 
 \lr{cellInfo}
@@ -381,6 +390,8 @@
 مقدار 3 به عنوان نوع سلول 
 \lr{WCDMA}
  مشخص می‌شود و اطلاعات به صورت "3:شناسه\_سلول,قدرت\_سیگنال;" به سرور ارسال می‌شود.
+ 
+ 
 \textbf{\lr{Unknown Cell Type}:}
 
 اگر نوع
@@ -406,6 +417,13 @@
  به شما کمک می‌کند تا به طور کارآمد‌تر و سازمان‌یافته‌تر انواع مختلف سلول‌های شبکه را در برنامه خود شناسایی و مدیریت کنید.
 
 از این روش برای ایجاد یک لایه اضافی امنیتی استفاده می‌شود، به طوری که تنها کاربرانی که دارای کد دسترسی صحیح هستند، به اطلاعات حساس دسترسی داشته باشند.
+
+\begin{figure}[b]
+	\centering
+	\includegraphics[width=0.5\textwidth]{Pic/Message}
+	\caption{پیام دریافت شده در سرور}
+	\label{fig:Server}
+\end{figure}
 \chapter{توضیحات کدها}
 \section{فایل
 \lr{MainActivity.kt}
@@ -548,7 +566,7 @@
    و یا
    \lr{-110}
     باشد، قسمت‌های پیام را ارسال می‌کند. سپس به مدت 
-    10 
+    15 
     ثانیه منتظر می‌ماند و در نهایت 
     \lr{session} 
     و 
@@ -558,6 +576,18 @@
      ثبت می‌کند و مقدار 
      \lr{false} 
      را بازمی‌گرداند.
+     
+     بخش آستانه:
+
+\begin{latin}
+	\lstinputlisting[language=Kotlin]{Codes/threshold.kt}
+	\label{code:threshold}
+\end{latin}
+     بخش تاخیر:
+\begin{latin}
+	\lstinputlisting[language=Kotlin]{Codes/delay.kt}
+	\label{code:delay}
+\end{latin}
 
 \subsection{متد
 	\lr{getSessionConfig}
@@ -801,6 +831,91 @@
    .
    \lr{ChatItem}
     اضافه می‌کند و در نهایت مجموعه داده را به عنوان خروجی بازمی‌گرداند.
+    
+\section{فایل
+	\lr{LocationAndCellInfo.kt}
+}
+
+این کد یک کلاس به نام
+ \lr{LocationAndCellInfo} 
+ را نشان می‌دهد که برای دریافت اطلاعات مکانی و اطلاعات سلولی استفاده می‌شود. الگوهایی مانند
+  \lr{LocationManager} 
+  برای مدیریت خدمات مکانی و
+   \lr{TelephonyManager}
+    برای خدمات تلفنی استفاده می‌شوند.
+
+\subsection{شرح بخش‌های کد:}
+\textbf{کلاس و ویژگی‌های آن:}
+
+{\textbf{\lr{LocationAndCellInfo}:}} یک کلاس که مسئول مدیریت و دریافت اطلاعات مکانی و سلولی است.
+
+
+{\textbf{\lr{context}:}} متغیری که مربوط به 
+\lr{context}
+ اکتیویتی یا سرویس است که این کلاس در آن ساخته می‌شود.
+ 
+ 
+\textbf{متغیرها:}
+\begin{itemize}
+	\item \textbf{\lr{locationManager}:} برای مدیریت خدمات مکانی، از جمله درخواست‌های مکانی و شنود تغییرات مکانی.
+	\item \textbf{\lr{telephonyManager}:} برای دسترسی به اطلاعات تلفنی، مانند اطلاعات سلولی (
+	\lr{CellInfo}
+	).
+	\item \textbf{\lr{LocationListener}:}
+	
+	یک
+	\lr{LocationListener} 
+	به نام 
+	\lr{locationListener} 
+	که برای شنیدن تغییرات مکانی و مدیریت آن‌ها استفاده می‌شود. این شامل توابعی برای زمانی که مکان تغییر کرده، غیرفعال شده یا فعال شده است.
+	\item \textbf{\lr{initialize()}:}
+	
+	متد
+	\lr{initialize()}
+	که
+	\lr{locationManager} 
+	و
+	\lr{telephonyManager} 
+	را مقداردهی اولیه می‌کند با استفاده از
+	\lr{context.getSystemService()}
+	.
+	\item \textbf{\lr{startLocationUpdates()}:}
+	
+	متد
+	\lr{startLocationUpdates()} 
+	که شروع به دریافت به‌روزرسانی‌های مکانی از
+	\lr{GPS\_PROVIDER}
+	می‌کند، پس از بررسی مجوزهای لازم.
+	\item 
+	\textbf{\lr{stopLocationUpdates()}:}
+	
+	متد
+	\lr{stopLocationUpdates()}
+	که متوقف کردن دریافت به‌روزرسانی‌های مکانی را انجام می‌دهد.
+	\item 
+	\textbf{\lr{getLastKnownLocation()}:}
+	
+	متد
+	\lr{getLastKnownLocation()}
+	که آخرین مکان شناخته شده را برمی‌گرداند، اگر مجوز مکانی فراهم باشد.
+	\item 
+	\textbf{\lr{getCellInfo()}:}
+	
+	متد
+	\lr{getCellInfo()}
+	که اطلاعات سلولی را برمی‌گرداند، شامل نوع سلول (
+	\lr{GSM}
+	،
+	\lr{CDMA}
+	،
+	\lr{LTE}
+	یا
+	\lr{WCDMA}
+	) و اطلاعات شناسه سلول و قدرت سیگنال آن.
+	این کلاس کمک می‌کند تا به راحتی از ویژگی‌های مکانی و اطلاعات سلولی دسترسی پیدا کرد و از آن‌ها در برنامه‌ استفاده کرد.
+\end{itemize}
+   
+
 \chapter {مراجع}
 \begin{itemize}
 	\item 1

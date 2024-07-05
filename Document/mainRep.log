@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.27)  6 JUL 2024 01:18
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.27)  6 JUL 2024 02:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2153,14 +2153,16 @@ File: Pic/WrongCode.jpg Graphic file (type bmp)
 <Pic/WrongCode.jpg>
 File: Pic/CorrectCode.jpg Graphic file (type bmp)
 <Pic/CorrectCode.jpg>
+File: Pic/Message.png Graphic file (type bmp)
+<Pic/Message.png>
 
 (./Codes/enums.kt [6])
 LaTeX Font Info:    Font shape `TU/LinuxLibertine(0)/b/n' will be
-(Font)              scaled to size 13.20007pt on input line 329.
+(Font)              scaled to size 13.20007pt on input line 335.
 LaTeX Font Info:    Font shape `TU/LinuxLibertine(0)/b/n' will be
-(Font)              scaled to size 11.00006pt on input line 331.
+(Font)              scaled to size 11.00006pt on input line 337.
 
-Overfull \hbox (1.39578pt too wide) in paragraph at lines 345--385
+Overfull \hbox (1.39578pt too wide) in paragraph at lines 351--364
 [][][]\TU/LinuxLibertine(0)/b/n/10 CellInfoCdma[]\TU/IRNazanin(0)/b/n/10 : \TU/
 IRNazanin(0)/m/n/10 اگر []\TU/LinuxLibertine(0)/m/n/10 cellInfo[] \TU/IRNazanin
 (0)/m/n/10 یک نمونه از []\TU/LinuxLibertine(0)/m/n/10 CellInfoCdma[] \TU/IRNaza
@@ -2170,65 +2172,57 @@ U/IRNazanin(0)/m/n/10 و []\TU/LinuxLibertine(0)/m/n/10 cellSignalStrength[] \TU
  []
 
 
-Overfull \hbox (13.39418pt too wide) in paragraph at lines 345--385
-[]\TU/IRNazanin(0)/m/n/10 ارسال می‌شود. []\TU/LinuxLibertine(0)/b/n/10 CellInfo
-Lte[]\TU/IRNazanin(0)/b/n/10 : \TU/IRNazanin(0)/m/n/10 در صورتی که []\TU/LinuxL
-ibertine(0)/m/n/10 cellInfo[] \TU/IRNazanin(0)/m/n/10 یک نمونه از []\TU/LinuxLi
-bertine(0)/m/n/10 CellInfoLte[] \TU/IRNazanin(0)/m/n/10 باشد، از اطلاعات []\TU/
-LinuxLibertine(0)/m/n/10 cellIdentity[] \TU/IRNazanin(0)/m/n/10 و []\TU/LinuxLi
-bertine(0)/m/n/10 cellSignalStrength[][]
+Overfull \hbox (0.85002pt too wide) in paragraph at lines 380--393
+[]\TU/IRNazanin(0)/m/n/10 استفاده می‌شود. مقدار ۳ به عنوان نوع سلول []\TU/Linux
+Libertine(0)/m/n/10 WCDMA[] \TU/IRNazanin(0)/m/n/10 مشخص می‌شود و اطلاعات به صو
+رت ”۳:شناسه_سلول،قدرت_سیگنال؛”[]
  []
 
-
-Overfull \hbox (36.48401pt too wide) in paragraph at lines 345--385
-[]\TU/IRNazanin(0)/m/n/10 سرور ارسال می‌شود. []\TU/LinuxLibertine(0)/b/n/10 Cel
-lInfoWcdma[]\TU/IRNazanin(0)/b/n/10 : \TU/IRNazanin(0)/m/n/10 اگر []\TU/LinuxLi
-bertine(0)/m/n/10 cellInfo[] \TU/IRNazanin(0)/m/n/10 یک نمونه از []\TU/LinuxLib
-ertine(0)/m/n/10 CellInfoWcdma[] \TU/IRNazanin(0)/m/n/10 باشد، از اطلاعات []\TU
-/LinuxLibertine(0)/m/n/10 cellIdentity[] \TU/IRNazanin(0)/m/n/10 و []\TU/LinuxL
-ibertine(0)/m/n/10 cellSignalStrength[][]
- []
-
-
-Overfull \hbox (11.65324pt too wide) in paragraph at lines 345--385
-[]\TU/IRNazanin(0)/m/n/10 آن استفاده می‌شود. مقدار ۳ به عنوان نوع سلول []\TU/Li
-nuxLibertine(0)/m/n/10 WCDMA[] \TU/IRNazanin(0)/m/n/10 مشخص می‌شود و اطلاعات به
- صورت ”۳:شناسه_سلول،قدرت_سیگنال؛”[]
- []
-
-[7] [8] [9] [10] [11] [12]
+[7]
+File: Pic/Message.png Graphic file (type bmp)
+<Pic/Message.png>
+ [8] [9] [10] [11] [12] [13]
 فصل 4.
 
 Package fontspec Info: IRNazanin scale = 1.25.
 
 LaTeX Font Info:    Font shape `TU/LinuxLibertine(0)/b/n' will be
-(Font)              scaled to size 15.84007pt on input line 412.
+(Font)              scaled to size 15.84007pt on input line 430.
 
-Overfull \hbox (2.61612pt too wide) in paragraph at lines 424--435
+Overfull \hbox (2.61612pt too wide) in paragraph at lines 442--453
 []\TU/IRNazanin(0)/m/n/10 در متد []\TU/LinuxLibertine(0)/m/n/10 onCreate[] \TU/
 IRNazanin(0)/m/n/10 ، ابتدا نوار ابزار پنهان می‌شود و نمونه‌ای از []\TU/LinuxLi
 bertine(0)/m/n/10 LocationAndCellInfo[] \TU/IRNazanin(0)/m/n/10 برای دریافت اطل
 اعات مکان و سلول اولیه‌سازی[]
  []
 
-[13
+[14
 
-] [14] [15]
-Overfull \hbox (3.62407pt too wide) in paragraph at lines 642--657
+] (./Codes/threshold.kt [15]) (./Codes/delay.kt) [16]
+Overfull \hbox (3.62407pt too wide) in paragraph at lines 672--687
 []\TU/IRNazanin(0)/m/n/10 برای خواندن پیامک‌ها (آدرس، متن و نوع پیامک) را مشخص 
 می‌کند و سپس یک کوئری برای دریافت این داده‌ها از []\TU/LinuxLibertine(0)/m/n/10
  contentResolver[][]
  []
 
 
-Overfull \hbox (2.11264pt too wide) in paragraph at lines 658--673
+Overfull \hbox (2.11264pt too wide) in paragraph at lines 688--703
 []\TU/IRNazanin(0)/m/n/10 در کلاس []\TU/LinuxLibertine(0)/m/n/10 SMSActivation[
 ] \TU/IRNazanin(0)/m/n/10 متغیرهای []\TU/LinuxLibertine(0)/m/n/10 permission[] 
 \TU/IRNazanin(0)/m/n/10 و []\TU/LinuxLibertine(0)/m/n/10 requestCode[] \TU/IRNa
 zanin(0)/m/n/10 برای مدیریت مجوزهای دسترسی به پیامک‌ها استفاده می‌شوند.[]
  []
 
-[16] [17]
+[17] [18]
+Overfull \hbox (37.75044pt too wide) in paragraph at lines 873--882
+[][]\TU/IRNazanin(0)/m/n/10 متد []\TU/LinuxLibertine(0)/m/n/10 initialize()[] \
+TU/IRNazanin(0)/m/n/10 که []\TU/LinuxLibertine(0)/m/n/10 locationManager[] \TU/
+IRNazanin(0)/m/n/10 و []\TU/LinuxLibertine(0)/m/n/10 telephonyManager[] \TU/IRN
+azanin(0)/m/n/10 را مقداردهی اولیه می‌کند با استفاده از []\TU/LinuxLibertine(0)
+/m/n/10 context.getSystemService()[][]
+ []
+
+[19] [20]
 فصل 5.
 
 Package fontspec Info: IRNazanin scale = 1.25.
@@ -2238,7 +2232,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[18
+[21
 
 ] (./mainRep.aux)
  ***********
@@ -2246,15 +2240,15 @@ LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
 Package rerunfilecheck Info: File `mainRep.out' has not changed.
-(rerunfilecheck)             Checksum: 603719AFAC0B4EB17E937BF4A7B2DDD1;6510.
+(rerunfilecheck)             Checksum: D2D0DA8CD97C1B42FE4B5CDB979BB156;6902.
  ) 
 Here is how much of TeX's memory you used:
- 39886 strings out of 474794
- 782702 string characters out of 5762089
+ 39980 strings out of 474794
+ 784203 string characters out of 5762089
  2144842 words of memory out of 5000000
- 61054 multiletter control sequences out of 15000+600000
+ 61141 multiletter control sequences out of 15000+600000
  565798 words of font info for 142 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  96i,9n,120p,2431b,2044s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on mainRep.pdf (19 pages).
+Output written on mainRep.pdf (22 pages).
