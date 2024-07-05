@@ -9,7 +9,7 @@ import android.widget.EditText
 import android.widget.ImageButton
 import android.widget.Toast
 
-class SettingsActivity : AppCompatActivity() {
+class SettingsActivation : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
