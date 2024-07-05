@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.27)  5 JUL 2024 22:53
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.27)  5 JUL 2024 23:15
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2121,41 +2121,57 @@ File: Pic/High_level_architecture.png Graphic file (type bmp)
 
 Package fontspec Info: IRNazanin scale = 1.25.
 
+LaTeX Font Info:    Font shape `TU/LinuxLibertine(0)/b/n' will be
+(Font)              scaled to size 27.36815pt on input line 133.
 LaTeX Font Info:    Font shape `TU/IRNazanin(0)/m/n' will be
 (Font)              scaled to size 17.99998pt on input line 135.
 LaTeX Font Info:    Font shape `TU/IRNazanin(0)/b/n' will be
 (Font)              scaled to size 17.99998pt on input line 135.
-LaTeX Font Info:    Font shape `TU/LinuxLibertine(0)/b/n' will be
-(Font)              scaled to size 15.84007pt on input line 135.
-LaTeX Font Info:    Font shape `TU/LinuxLibertine(0)/b/n' will be
-(Font)              scaled to size 13.20007pt on input line 146.
+[3
 
-Overfull \hbox (2.61612pt too wide) in paragraph at lines 147--158
+] [4]
+فصل 3.
+
+Package fontspec Info: IRNazanin scale = 1.25.
+
+[5
+
+]
+فصل 4.
+
+Package fontspec Info: IRNazanin scale = 1.25.
+
+LaTeX Font Info:    Font shape `TU/LinuxLibertine(0)/b/n' will be
+(Font)              scaled to size 15.84007pt on input line 219.
+LaTeX Font Info:    Font shape `TU/LinuxLibertine(0)/b/n' will be
+(Font)              scaled to size 13.20007pt on input line 230.
+
+Overfull \hbox (2.61612pt too wide) in paragraph at lines 231--242
 []\TU/IRNazanin(0)/m/n/10 در متد []\TU/LinuxLibertine(0)/m/n/10 onCreate[] \TU/
 IRNazanin(0)/m/n/10 ، ابتدا نوار ابزار پنهان می‌شود و نمونه‌ای از []\TU/LinuxLi
 bertine(0)/m/n/10 LocationAndCellInfo[] \TU/IRNazanin(0)/m/n/10 برای دریافت اطل
 اعات مکان و سلول اولیه‌سازی[]
  []
 
-[3
+[6
 
-] [4] [5]
-Overfull \hbox (3.62407pt too wide) in paragraph at lines 365--380
+] [7] [8]
+Overfull \hbox (3.62407pt too wide) in paragraph at lines 449--464
 []\TU/IRNazanin(0)/m/n/10 برای خواندن پیامک‌ها (آدرس، متن و نوع پیامک) را مشخص 
 می‌کند و سپس یک کوئری برای دریافت این داده‌ها از []\TU/LinuxLibertine(0)/m/n/10
  contentResolver[][]
  []
 
 
-Overfull \hbox (2.11264pt too wide) in paragraph at lines 381--396
+Overfull \hbox (2.11264pt too wide) in paragraph at lines 465--480
 []\TU/IRNazanin(0)/m/n/10 در کلاس []\TU/LinuxLibertine(0)/m/n/10 SMSActivation[
 ] \TU/IRNazanin(0)/m/n/10 متغیرهای []\TU/LinuxLibertine(0)/m/n/10 permission[] 
 \TU/IRNazanin(0)/m/n/10 و []\TU/LinuxLibertine(0)/m/n/10 requestCode[] \TU/IRNa
 zanin(0)/m/n/10 برای مدیریت مجوزهای دسترسی به پیامک‌ها استفاده می‌شوند.[]
  []
 
-[6] [7]
-فصل 3.
+[9] [10]
+فصل 5.
 
 Package fontspec Info: IRNazanin scale = 1.25.
 
@@ -2164,30 +2180,23 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[8
+[11
 
 ] (./mainRep.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-02-20>
  ***********
-
-
-Package rerunfilecheck Warning: File `mainRep.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `mainRep.out':
-(rerunfilecheck)             Before: 4F23F8FEE00DF77856B84E7066189EC0;2763
-(rerunfilecheck)             After:  DFB7EF100242B821A71D77E9DA5790D5;4315.
+Package rerunfilecheck Info: File `mainRep.out' has not changed.
+(rerunfilecheck)             Checksum: 469054B101967F47DA0F86682FAA2EBE;5391.
  ) 
 Here is how much of TeX's memory you used:
- 39451 strings out of 474794
- 775654 string characters out of 5762089
+ 39467 strings out of 474794
+ 776053 string characters out of 5762089
  1935842 words of memory out of 5000000
- 60646 multiletter control sequences out of 15000+600000
- 565590 words of font info for 136 fonts, out of 8000000 for 9000
+ 60661 multiletter control sequences out of 15000+600000
+ 565598 words of font info for 137 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  96i,9n,120p,2431b,1361s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on mainRep.pdf (9 pages).
+Output written on mainRep.pdf (12 pages).
