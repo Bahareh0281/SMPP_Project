@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.27)  5 JUL 2024 18:40
+This is XeTeX, Version 3.141592653-2.6-0.999995 (TeX Live 2023) (preloaded format=xelatex 2024.2.27)  5 JUL 2024 19:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2146,7 +2146,7 @@ Overfull \hbox (2.11264pt too wide) in paragraph at lines 275--290
 zanin(0)/m/n/10 برای مدیریت مجوزهای دسترسی به پیامک‌ها استفاده می‌شوند.[]
  []
 
-[5]
+[5] [6]
 فصل 3.
 
 Package fontspec Info: IRNazanin scale = 1.25.
@@ -2156,7 +2156,7 @@ Package glossaries Warning: No \printglossary or \printglossaries found.
 (Remove \makeglossaries if you don't want any glossaries.) 
 This document will not have a glossary.
 
-[6
+[7
 
 ] (./mainRep.aux)
  ***********
@@ -2170,16 +2170,16 @@ Package rerunfilecheck Warning: File `mainRep.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `mainRep.out':
-(rerunfilecheck)             Before: E66F259AE0BED641C36BEDED019BFF47;2437
-(rerunfilecheck)             After:  BB7098C13022CA0DBCF852B0758BBC0F;2595.
+(rerunfilecheck)             Before: BB7098C13022CA0DBCF852B0758BBC0F;2595
+(rerunfilecheck)             After:  4F23F8FEE00DF77856B84E7066189EC0;2763.
  ) 
 Here is how much of TeX's memory you used:
- 39449 strings out of 474794
- 775590 string characters out of 5762089
+ 39450 strings out of 474794
+ 775622 string characters out of 5762089
  1935842 words of memory out of 5000000
- 60644 multiletter control sequences out of 15000+600000
+ 60645 multiletter control sequences out of 15000+600000
  565590 words of font info for 136 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  96i,9n,120p,2431b,1361s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on mainRep.pdf (7 pages).
+Output written on mainRep.pdf (8 pages).
